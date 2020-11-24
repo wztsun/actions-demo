@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   hello_world_job:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-16.04
     name: A job to say hello
     steps:
       # 要使用此仓库的私有操作，
