@@ -19,3 +19,10 @@ jobs:
       - name: setup go
         id: go
         uses: actions/setup-go@v2.1.3
+
+      - name: Build
+        run: go build .
+
+      - name: Test
+        run: go test -v .
+
