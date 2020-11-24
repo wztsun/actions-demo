@@ -8,7 +8,7 @@ jobs:
       # 要使用此仓库的私有操作，
       # 您必须检出仓库
       - name: Checkout
-        uses: wztsun/actions-demo@v2
+        uses: wztsun/actions-demo@v1
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: hello
