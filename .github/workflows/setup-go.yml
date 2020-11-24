@@ -24,6 +24,4 @@ jobs:
         run: go build .
       - name: Build2
         run: go run main.go
-      - name: Test
-        run: go test -v .
 
