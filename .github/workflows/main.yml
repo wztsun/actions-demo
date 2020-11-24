@@ -1,19 +1,16 @@
-on: [push]
+name: Greeting from Mona
+on: push
 
 jobs:
-  hello_world_job:
-    runs-on: ubuntu-16.04
-    name: A job to say hello
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
     steps:
-      # 要使用此仓库的私有操作，
-      # 您必须检出仓库
-      - name: Checkout
-        uses: wztsun/actions-demo@v1
-      - name: Hello world actions
-        uses: ./ # Uses an action in the root directory
-        id: hello
-        with:
-          who-to-greet: 'Mona the Octocat'
-      # 使用来自 `hello` 步骤的输出
-      - name: Get the output time
-        run:  echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Print a greeting
+        env:
+          MY_VAR: Hi there! My name is
+          FIRST_NAME: Mona
+          MIDDLE_NAME: The
+          LAST_NAME: Octocat
+        run: |
+          echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
