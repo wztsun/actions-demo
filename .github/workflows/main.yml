@@ -15,8 +15,7 @@ jobs:
         with:
           who-to-greet: 'Mona the Octocat'
       # 使用来自 `hello` 步骤的输出
+      - name: chmod the file
+        run: chmod +x entrypoint.sh
       - name: Get the output time
-
-        run:|
-             chmod +x entrypoint.sh
-             echo "The time was ${{ steps.hello.outputs.time }}"
+        run:  echo "The time was ${{ steps.hello.outputs.time }}"
